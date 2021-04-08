@@ -14,6 +14,7 @@ export default createGlobalStyle`
     --gray-300: #a8a8b3;
     --gray-800: #29292e;
     --gray-900: #121214;
+    --gray-1000: #080808;
 
     --animate-delay: 1s;
     --animate-duration: 900ms;
@@ -32,7 +33,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: var(--gray-900);
+    background: var(--gray-1000);
     color: var(--white);
   }
 

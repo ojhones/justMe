@@ -2,11 +2,15 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: calc(100vh - 5rem);
+  min-height: calc(100vh - 5rem);
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 902px) {
+    flex-direction: column;
+  }
 
   aside {
     width: 50%;
@@ -17,6 +21,11 @@ export const Container = styled.div`
     align-items: flex-end;
     flex-direction: column;
     justify-content: center;
+
+    @media (max-width: 902px) {
+      width: 95%;
+      height: calc(75vh - 5rem);
+    }
 
     > span {
       font-size: 1rem;
@@ -31,6 +40,10 @@ export const Container = styled.div`
       font-weight: 900;
       font-size: 4.5rem;
       line-height: 4.5rem;
+
+      @media (max-width: 902px) {
+        font-size: 3.5rem;
+      }
     }
 
     p {
@@ -48,6 +61,17 @@ export const Container = styled.div`
     + aside {
       align-items: center;
 
+      h3 {
+        top: -20%;
+        right: -45%;
+        position: relative;
+
+        font-size: 3rem;
+        letter-spacing: 1rem;
+        color: var(--gray-800);
+        transform: rotate(90deg);
+      }
+
       div {
         position: relative;
 
@@ -55,6 +79,11 @@ export const Container = styled.div`
         height: 35rem;
 
         border: 3px solid var(--gray-800);
+
+        @media (max-width: 902px) {
+          width: 20rem;
+          height: 30rem;
+        }
 
         img {
           top: 2rem;

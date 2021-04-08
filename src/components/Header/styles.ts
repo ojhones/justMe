@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-  height: 5rem;
+  min-height: 5rem;
   border-bottom: 0.5px solid var(--gray-800);
 
   div {

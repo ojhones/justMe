@@ -18,6 +18,8 @@ export default function Home() {
         <div>
           <img src="/images/jhonatanLima.jpg" alt="Apenas eu!" />
         </div>
+
+        <h3>Jhonatan</h3>
       </aside>
     </S.Container>
   )
