@@ -15,7 +15,6 @@ export const Container = styled.div`
   aside {
     width: 50%;
     max-width: 600px;
-    height: calc(100vh - 5rem);
 
     display: flex;
     align-items: flex-end;
@@ -62,9 +61,10 @@ export const Container = styled.div`
       align-items: center;
 
       h3 {
-        top: -20%;
         right: -45%;
         position: relative;
+
+        margin-top: -30%;
 
         font-size: 3rem;
         letter-spacing: 1rem;
