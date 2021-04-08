@@ -1,29 +1,24 @@
-import Lottie from 'react-lottie'
-
-import animationData from '../../public/animations/atom.json'
 
 import * as S from '../styles/pages/index'
 
 export default function Home() {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
-  };
-
   return (
-    <S.Container>
-      <div className="animate__animated animate__fadeInUp">
-        <Lottie
-          height={200}
-          width={200}
-          options={defaultOptions}
-        />
-      </div>
-      <h1 className="animate__animated animate__fadeInDown">Building ...</h1>
+    <S.Container className="animate__animated animate__fadeInDown">
+      <aside>
+        <span>{'</>'} FrontEnd Developer </span>
+        <h1>Jhonatan Lima</h1>
+        <p>
+          Esse é o meu portfólio, criado com as melhores práticas e tecnologias
+          que conheço no momento e, sinceramente, farei desse "conheço no momento"
+          meu eterno aprendizado!
+        </p>
+      </aside>
+
+      <aside>
+        <div>
+          <img src="/images/jhonatanLima.jpg" alt="Apenas eu!" />
+        </div>
+      </aside>
     </S.Container>
   )
 }
