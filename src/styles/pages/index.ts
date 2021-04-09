@@ -57,6 +57,33 @@ export const Wrapper = styled.div`
       letter-spacing: 0.2rem;
     }
 
+    section {
+      width: 100%;
+      height: auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      svg {
+        width: 4rem;
+        height: 4rem;
+        margin-top: 2rem;
+
+        transition: 0.2s;
+        color: var(--gray-300);
+
+        &:hover {
+          cursor: pointer;
+          filter: brightness(0.8);
+        }
+
+        + svg {
+          margin-left: 1.5rem;
+        }
+      }
+    }
+
     + aside {
       width: 100%;
       align-items: center;

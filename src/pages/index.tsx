@@ -1,4 +1,5 @@
 import Typewriter from 'typewriter-effect'
+import { FaWhatsappSquare, FaLinkedin, FaFacebookSquare } from 'react-icons/fa'
 
 import {
   Trail
@@ -30,7 +31,13 @@ export default function Home() {
             Esse é o meu portfólio, criado com as melhores práticas e tecnologias
             que conheço no momento e, sinceramente, farei desse "conheço no momento"
             meu eterno aprendizado!
-        </p>
+          </p>
+
+          <section>
+            <FaWhatsappSquare />
+            <FaLinkedin />
+            <FaFacebookSquare />
+          </section>
         </aside>
 
         <aside>
