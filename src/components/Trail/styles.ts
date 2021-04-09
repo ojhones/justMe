@@ -16,7 +16,7 @@ export const Container = styled.div`
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 
     div {
       position: relative;
@@ -86,7 +86,7 @@ export const Container = styled.div`
     }
 
     + main {
-      margin-top: -5rem;
+      margin-top: -10rem;
 
       flex-direction: row-reverse;
 
@@ -96,7 +96,7 @@ export const Container = styled.div`
         }
 
         h3 {
-          left: 56%;
+          left: 50%;
           bottom: 2rem;
           position: absolute;
         }

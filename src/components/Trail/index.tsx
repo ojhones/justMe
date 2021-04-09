@@ -11,11 +11,11 @@ export function Trail() {
             className="animate__animated  animate__fadeInLeft animate__delay-1s"
           />
 
-          <h3>Jhonatan</h3>
+          <h3>#iClouds</h3>
         </div>
 
         <aside>
-          <h2>I have some ideas</h2>
+          <h2>iCLouds</h2>
           <p>
             Mussum Ipsum, cacilds vidis litro abertis.
             Nec orci ornare consequat. Praesent lacinia ultrices consectetur.
@@ -45,11 +45,11 @@ export function Trail() {
             className="animate__animated  animate__fadeInLeft animate__delay-1s"
           />
 
-          <h3>Jhonatan</h3>
+          <h3>#Mercantil</h3>
         </div>
 
         <aside>
-          <h2>I have some ideas</h2>
+          <h2>Banco Mercantil</h2>
           <p>
             Mussum Ipsum, cacilds vidis litro abertis.
             Nec orci ornare consequat. Praesent lacinia ultrices consectetur.
