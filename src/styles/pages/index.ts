@@ -65,21 +65,22 @@ export const Wrapper = styled.div`
       align-items: center;
       justify-content: flex-end;
 
-      svg {
-        width: 4rem;
-        height: 4rem;
-        margin-top: 2rem;
+      a {
+        svg {
+          width: 4rem;
+          height: 4rem;
+          margin-top: 2rem;
 
-        transition: 0.2s;
-        color: var(--gray-300);
+          transition: 0.2s;
+          color: var(--gray-300);
 
-        &:hover {
-          cursor: pointer;
-          filter: brightness(0.8);
+          &:hover {
+            cursor: pointer;
+            filter: brightness(0.8);
+          }
         }
-
-        + svg {
-          margin-left: 1.5rem;
+        + a {
+          margin-left: 0.5rem;
         }
       }
     }

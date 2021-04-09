@@ -27,16 +27,22 @@ export default function Home() {
           />
 
           <h1 className="animate__animated  animate__fadeIn">Jhonatan Lima</h1>
-          <p className="animate__animated  animate__fadeIn animate__delay-1s">
+          <p className="animate__animated  animate__fadeIn animate__delay-2s">
             Esse é o meu portfólio, criado com as melhores práticas e tecnologias
             que conheço no momento e, sinceramente, farei desse "conheço no momento"
             meu eterno aprendizado!
           </p>
 
           <section>
-            <FaWhatsappSquare />
-            <FaLinkedin />
-            <FaFacebookSquare />
+            <a href="#" className="animate__animated  animate__bounceIn animate__delay-3s">
+              <FaWhatsappSquare />
+            </a>
+            <a href="#" className="animate__animated  animate__bounceIn animate__delay-4s">
+              <FaLinkedin />
+            </a>
+            <a href="#" className="animate__animated  animate__bounceIn animate__delay-5s">
+              <FaFacebookSquare />
+            </a>
           </section>
         </aside>
 
