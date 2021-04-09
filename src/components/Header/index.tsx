@@ -1,9 +1,9 @@
-import Link from 'next/link'
-import Lottie from 'react-lottie'
+import Link from "next/link";
+import Lottie from "react-lottie";
 
-import animationData from '../../../public/animations/atom.json'
+import animationData from "../../../public/animations/atom.json";
 
-import * as S from './styles'
+import * as S from "./styles";
 
 export function Header() {
   const defaultOptions = {
@@ -11,27 +11,24 @@ export function Header() {
     autoplay: true,
     animationData: animationData,
     rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
+      preserveAspectRatio: "xMidYMid slice",
+    },
   };
 
   return (
     <S.Container>
       <div>
-        <aside>
-          <Lottie
-            height={80}
-            width={150}
-            options={defaultOptions}
-          />
+        <aside className="animate__animated  animate__fadeInTopLeft">
+          <Lottie height={80} width={150} options={defaultOptions} />
         </aside>
 
         <nav>
-          <Link href="/" >Home</Link>
-          <Link href="/projetos">Projetos</Link>
+          <a href="/" className="animate__animated  animate__bounceIn animate__delay-1s">
+            Home
+          </a>
+          <a href="/projectos" className="animate__animated  animate__bounceIn animate__delay-2s">Projetos</a>
         </nav>
-
       </div>
     </S.Container>
-  )
+  );
 }
