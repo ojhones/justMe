@@ -24,7 +24,7 @@ export function Header() {
 
         <nav>
           <Link href="/">Home</Link>
-          <Link href="/projects">Projetos</Link>
+          <Link href="/projects">Projects</Link>
         </nav>
       </div>
     </S.Container>

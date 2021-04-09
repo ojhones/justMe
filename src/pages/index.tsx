@@ -1,4 +1,9 @@
 import Typewriter from 'typewriter-effect'
+
+import {
+  Trail
+} from '../components'
+
 import * as S from '../styles/pages/index'
 
 export default function Home() {
@@ -13,7 +18,7 @@ export default function Home() {
                 'Front-end Developer',
                 'Desenvolvido por <a href="http://jhonatanlima.com.br">Jhonatan Lima</a> ',
                 'Github: <a href="https://github.com/jhonatanllima">jhonatanllima</a> ',
-                'Linkedin: <a href="https://www.linkedin.com/in/jhonatan-lima-75a2a0142/">/Jhonatan Lima</a> ',
+                'Linkedin: <a href="https://www.linkedin.com/in/jhonatan-lima-75a2a0142/">Jhonatan Lima</a> ',
               ],
               autoStart: true,
               loop: true,
@@ -39,6 +44,8 @@ export default function Home() {
           </div>
         </aside>
       </S.Wrapper>
+
+      <Trail />
     </S.Container>
   )
 }
