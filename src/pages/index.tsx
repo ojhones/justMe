@@ -1,4 +1,4 @@
-
+import Typewriter from 'typewriter-effect'
 import * as S from '../styles/pages/index'
 
 export default function Home() {
@@ -6,9 +6,22 @@ export default function Home() {
     <S.Container >
       <S.Wrapper>
         <aside>
-          <span>{'</>'} FrontEnd Developer </span>
-          <h1>Jhonatan Lima</h1>
-          <p>
+          <Typewriter
+            onInit={Array}
+            options={{
+              strings: [
+                'Front-end Developer',
+                'Desenvolvido por <a href="http://jhonatanlima.com.br">Jhonatan Lima</a> ',
+                'Github: <a href="https://github.com/jhonatanllima">jhonatanllima</a> ',
+                'Linkedin: <a href="https://www.linkedin.com/in/jhonatan-lima-75a2a0142/">/Jhonatan Lima</a> ',
+              ],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+
+          <h1 className="animate__animated  animate__fadeIn">Jhonatan Lima</h1>
+          <p className="animate__animated  animate__fadeIn animate__delay-1s">
             Esse é o meu portfólio, criado com as melhores práticas e tecnologias
             que conheço no momento e, sinceramente, farei desse "conheço no momento"
             meu eterno aprendizado!
@@ -16,8 +29,11 @@ export default function Home() {
         </aside>
 
         <aside>
-          <div>
-            <img src="/images/jhonatanLima.jpg" alt="Jhonatan Lima!" />
+          <div className="animate__animated  animate__fadeIn">
+            <img
+              src="/images/jhonatanLima.jpg" alt="Jhonatan Lima!"
+              className="animate__animated  animate__fadeInLeft animate__delay-1s"
+            />
 
             <h3>Jhonatan</h3>
           </div>

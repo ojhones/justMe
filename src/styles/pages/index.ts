@@ -32,15 +32,8 @@ export const Wrapper = styled.div`
       height: calc(75vh - 5rem);
     }
 
-    > span {
-      font-size: 1rem;
-      font-weight: lighter;
-      color: var(--gray-300);
-      letter-spacing: 0.2rem;
-    }
-
     h1 {
-      margin-top: 0rem;
+      margin-top: 0.2rem;
 
       font-weight: 900;
       font-size: 4.5rem;

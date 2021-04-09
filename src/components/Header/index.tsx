@@ -16,17 +16,15 @@ export function Header() {
   };
 
   return (
-    <S.Container>
+    <S.Container className="animate__animated  animate__fadeIn">
       <div>
-        <aside className="animate__animated  animate__fadeInTopLeft">
+        <aside className="animate__animated  animate__fadeInTopLeft animate__delay-1s">
           <Lottie height={80} width={150} options={defaultOptions} />
         </aside>
 
         <nav>
-          <a href="/" className="animate__animated  animate__bounceIn animate__delay-1s">
-            Home
-          </a>
-          <a href="/projectos" className="animate__animated  animate__bounceIn animate__delay-2s">Projetos</a>
+          <Link href="/">Home</Link>
+          <Link href="/projects">Projetos</Link>
         </nav>
       </div>
     </S.Container>
