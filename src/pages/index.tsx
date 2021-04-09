@@ -37,7 +37,7 @@ export default function Home() {
           <div className="animate__animated  animate__fadeIn">
             <img
               src="/images/jhonatanLima.jpg" alt="Jhonatan Lima!"
-              className="animate__animated  animate__fadeInLeft animate__delay-1s"
+              className="animate__animated  animate__fadeIn animate__delay-1s"
             />
 
             <h3>Jhonatan</h3>
