@@ -3,7 +3,6 @@ import * as S from './styles'
 export function Trail() {
   return (
     <S.Container>
-
       <main>
         <div className="animate__animated  animate__fadeIn">
           <img
@@ -37,7 +36,6 @@ export function Trail() {
         </aside>
       </main>
 
-
       <main>
         <div className="animate__animated  animate__fadeIn">
           <img
@@ -45,11 +43,11 @@ export function Trail() {
             className="animate__animated  animate__fadeInLeft animate__delay-1s"
           />
 
-          <h3>#Mercantil</h3>
+          <h3>#iClouds</h3>
         </div>
 
         <aside>
-          <h2>Banco Mercantil</h2>
+          <h2>iCLouds</h2>
           <p>
             Mussum Ipsum, cacilds vidis litro abertis.
             Nec orci ornare consequat. Praesent lacinia ultrices consectetur.
@@ -70,7 +68,6 @@ export function Trail() {
           </p>
         </aside>
       </main>
-
     </S.Container>
   )
 }

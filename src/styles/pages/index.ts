@@ -15,9 +15,13 @@ export const Wrapper = styled.div`
   max-width: 1100px;
   min-height: 800px;
 
-  gap: 0.5rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 780px) {
+    flex-direction: column;
+  }
 
   aside {
     width: 100%;
@@ -29,8 +33,7 @@ export const Wrapper = styled.div`
     justify-content: center;
 
     @media (max-width: 902px) {
-      width: 95%;
-      height: calc(75vh - 5rem);
+      margin-top: 5rem;
     }
 
     h1 {
@@ -71,12 +74,13 @@ export const Wrapper = styled.div`
           height: 4rem;
           margin-top: 2rem;
 
+          opacity: 0.3;
           transition: 0.2s;
           color: var(--gray-300);
 
           &:hover {
             cursor: pointer;
-            filter: brightness(0.8);
+            filter: brightness(1.8);
           }
         }
         + a {
@@ -100,6 +104,7 @@ export const Wrapper = styled.div`
         @media (max-width: 902px) {
           width: 20rem;
           height: 30rem;
+          margin-bottom: 10rem;
         }
 
         img {

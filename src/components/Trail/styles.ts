@@ -11,29 +11,30 @@ export const Container = styled.div`
 
   main {
     width: 100%;
+    padding: 0 5%;
     min-height: 800px;
     max-width: 1100px;
 
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+
+    @media (max-width: 791px) {
+      margin-top: 5rem;
+      flex-direction: column;
+    }
 
     div {
       position: relative;
 
-      width: 25rem;
-      height: 35rem;
+      width: 20rem;
+      height: 30rem;
 
       display: flex;
       align-items: center;
       justify-content: center;
 
       border: 3px solid var(--gray-800);
-
-      @media (max-width: 902px) {
-        width: 20rem;
-        height: 30rem;
-      }
 
       img {
         top: 2rem;
@@ -47,7 +48,7 @@ export const Container = styled.div`
       }
 
       h3 {
-        left: -40%;
+        left: -48%;
         bottom: 2rem;
         position: absolute;
 
@@ -59,7 +60,7 @@ export const Container = styled.div`
     }
 
     aside {
-      width: 25%;
+      width: 50%;
       margin-left: 3rem;
 
       h2 {
@@ -86,17 +87,24 @@ export const Container = styled.div`
     }
 
     + main {
-      margin-top: -10rem;
+      margin-top: -5rem;
 
       flex-direction: row-reverse;
 
+      @media (max-width: 791px) {
+        margin-top: 5rem;
+        flex-direction: column;
+      }
+
       div {
+        position: relative;
+
         img {
           left: 2rem;
         }
 
         h3 {
-          left: 50%;
+          left: 48%;
           bottom: 2rem;
           position: absolute;
         }

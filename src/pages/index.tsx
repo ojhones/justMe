@@ -1,5 +1,5 @@
 import Typewriter from 'typewriter-effect'
-import { FaWhatsappSquare, FaLinkedin, FaFacebookSquare } from 'react-icons/fa'
+import { FaWhatsappSquare, FaLinkedin, FaFacebookSquare, FaGithub } from 'react-icons/fa'
 
 import {
   Trail
@@ -27,20 +27,23 @@ export default function Home() {
           />
 
           <h1 className="animate__animated  animate__fadeIn">Jhonatan Lima</h1>
-          <p className="animate__animated  animate__fadeIn animate__delay-2s">
+          <p className="animate__animated  animate__fadeIn">
             Esse é o meu portfólio, criado com as melhores práticas e tecnologias
             que conheço no momento e, sinceramente, farei desse "conheço no momento"
             meu eterno aprendizado!
           </p>
 
           <section>
-            <a href="#" className="animate__animated  animate__bounceIn animate__delay-3s">
-              <FaWhatsappSquare />
+            <a href="#" className="animate__animated  animate__fadeIn animate__delay-2s">
+              <FaGithub />
             </a>
-            <a href="#" className="animate__animated  animate__bounceIn animate__delay-4s">
+            <a href="https://wa.me/5515996759630" className="animate__animated  animate__fadeIn animate__delay-3s">
               <FaLinkedin />
             </a>
-            <a href="#" className="animate__animated  animate__bounceIn animate__delay-5s">
+            <a href="#" className="animate__animated  animate__fadeIn animate__delay-4s">
+              <FaWhatsappSquare />
+            </a>
+            <a href="#" className="animate__animated  animate__fadeIn animate__delay-5s">
               <FaFacebookSquare />
             </a>
           </section>
