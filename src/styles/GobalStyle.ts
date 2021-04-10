@@ -21,6 +21,9 @@ export default createGlobalStyle`
   }
 
   html {
+
+    transition: .5s;
+
     ::-webkit-scrollbar {
       width: 2px;
       height: 2px;

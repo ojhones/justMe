@@ -3,11 +3,21 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   min-height: 100vh;
+  padding-bottom: 5rem;
 
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+
+  + div {
+    margin-top: -11rem;
+    min-height: auto;
+
+    @media (max-width: 791px) {
+      margin-top: -4rem;
+    }
+  }
 
   main {
     width: 100%;
@@ -61,7 +71,13 @@ export const Container = styled.div`
 
     aside {
       width: 50%;
-      margin-left: 3rem;
+      margin: 0 3rem;
+
+      @media (max-width: 791px) {
+        width: 100%;
+        margin-top: 7rem;
+        padding-left: 2.5rem;
+      }
 
       h2 {
         margin: 2rem 0;
@@ -74,7 +90,7 @@ export const Container = styled.div`
         margin-top: 1rem;
         padding-right: 2.5rem;
 
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         line-height: 1.4;
         font-weight: lighter;
         color: var(--gray-300);
@@ -111,6 +127,11 @@ export const Container = styled.div`
       }
 
       aside {
+        h2 {
+          text-align: end;
+          margin-right: 3rem;
+        }
+
         p {
           text-align: end;
         }
