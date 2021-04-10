@@ -4,6 +4,11 @@ export function Trail() {
   return (
     <>
       <S.Container>
+        <h1>
+          <span>Front</span>
+          Just me
+        </h1>
+
         <main>
           <div className="animate__animated  animate__fadeIn">
             <img

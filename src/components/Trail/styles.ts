@@ -19,6 +19,37 @@ export const Container = styled.div`
     }
   }
 
+  h1 {
+    position: relative;
+
+    width: 100%;
+    height: 8rem;
+    max-width: 500px;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 4rem;
+
+    @media (max-width: 791px) {
+      padding-left: 5rem;
+    }
+
+    span {
+      z-index: -1;
+      top: -2.5rem;
+      left: -10.2rem;
+      position: absolute;
+
+      font-size: 8rem;
+      color: var(--gray-800);
+
+      @media (max-width: 791px) {
+        padding-left: 11rem;
+      }
+    }
+  }
+
   main {
     width: 100%;
     padding: 0 5%;
