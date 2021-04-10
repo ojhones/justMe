@@ -48,19 +48,20 @@ export const Container = styled.div`
 
       img {
         top: 2rem;
-        right: 2rem;
+        right: 6rem;
         position: absolute;
 
         width: 100%;
         height: 100%;
 
-        object-fit: cover;
+        object-fit: contain;
       }
 
       h3 {
-        left: -48%;
+        left: -7rem;
         bottom: 2rem;
-        position: absolute;
+        bottom: -14rem;
+        position: relative;
 
         font-size: 3rem;
         letter-spacing: 1rem;
@@ -113,15 +114,14 @@ export const Container = styled.div`
       }
 
       div {
-        position: relative;
-
         img {
-          left: 2rem;
+          position: relative;
+          left: 5rem;
         }
 
         h3 {
-          left: 48%;
-          bottom: 2rem;
+          left: 5rem;
+          bottom: 0rem;
           position: absolute;
         }
       }
