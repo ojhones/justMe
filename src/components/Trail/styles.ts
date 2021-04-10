@@ -55,6 +55,15 @@ export const Container = styled.div`
         height: 100%;
 
         object-fit: contain;
+
+        :hover {
+          cursor: pointer;
+          transform: translateY(-0.35rem);
+        }
+
+        @media (max-width: 791px) {
+          right: 3rem;
+        }
       }
 
       h3 {
@@ -117,6 +126,10 @@ export const Container = styled.div`
         img {
           position: relative;
           left: 5rem;
+
+          @media (max-width: 791px) {
+            left: 2rem;
+          }
         }
 
         h3 {

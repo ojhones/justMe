@@ -25,7 +25,6 @@ export default function Home() {
               loop: true,
             }}
           />
-
           <h1 className="animate__animated  animate__fadeIn">Jhonatan Lima</h1>
           <p className="animate__animated  animate__fadeIn">
             Esse é o meu portfólio, criado com as melhores práticas e tecnologias

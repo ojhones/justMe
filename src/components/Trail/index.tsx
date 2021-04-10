@@ -39,8 +39,9 @@ export function Trail() {
               src="/images/mercantil.png" alt="Jhonatan Lima!"
               className="animate__animated  animate__fadeInLeft animate__delay-1s"
             />
-
+      
             <h3>#Mercantil</h3>
+      
           </div>
 
           <aside>
