@@ -5,5 +5,5 @@ import { Header } from './Header'
 export {
   SEO,
   Trail,
-  Header
+  Header,
 }

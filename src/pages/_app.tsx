@@ -2,7 +2,7 @@ import GlobalStyle from '../styles/GobalStyle'
 
 import {
   SEO,
-  Header
+  Header,
 } from '../components'
 
 function MyApp({ Component, pageProps }) {
@@ -18,5 +18,6 @@ function MyApp({ Component, pageProps }) {
     </>
   )
 }
+
 
 export default MyApp
