@@ -19,6 +19,26 @@ export const Container = styled.div`
     }
   }
 
+  a {
+    svg {
+      width: 4rem;
+      height: 4rem;
+      margin-top: 2rem;
+
+      opacity: 0.3;
+      transition: 0.2s;
+      color: var(--gray-300);
+
+      &:hover {
+        cursor: pointer;
+        filter: brightness(1.8);
+      }
+    }
+    + a {
+      margin-left: 0.5rem;
+    }
+  }
+
   h1 {
     position: relative;
 
@@ -87,11 +107,6 @@ export const Container = styled.div`
 
         object-fit: contain;
 
-        :hover {
-          cursor: pointer;
-          transform: translateY(-0.35rem);
-        }
-
         @media (max-width: 791px) {
           right: 3rem;
         }
@@ -135,10 +150,6 @@ export const Container = styled.div`
         font-weight: lighter;
         color: var(--gray-300);
         letter-spacing: 0.2rem;
-
-        + p {
-          margin-top: 1rem;
-        }
       }
     }
 
@@ -171,7 +182,7 @@ export const Container = styled.div`
 
       aside {
         h2 {
-          text-align: end;
+          text-align: right;
           margin-right: 3rem;
         }
 
