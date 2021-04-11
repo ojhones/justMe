@@ -23,38 +23,38 @@ export default function Custom404() {
           width={350}
           options={defaultOptions}
         />
-        <h1 className="animate__animated animate__fadeInDown">
-          Essa página ainda não foi criada :(</h1>
+      </div>
+      <h1 className="animate__animated animate__fadeInDown">
+        Essa página ainda não foi criada :(</h1>
 
-        <h2 className="animate__animated  animate__fadeIn animate__delay-1s" >
-          Aproveita, me segue e diz o que <br /> achou do meu portifólio!
+      <h2 className="animate__animated  animate__fadeIn animate__delay-1s" >
+        Aproveita, me segue e diz o que <br /> achou do meu portifólio!
       </h2>
 
-        <section>
-          <a
-            href="https://github.com/jhonatanllima"
-            target="blank" className="animate__animated  animate__fadeIn animate__delay-2s">
-            <FaGithub />
-          </a>
+      <section>
+        <a
+          href="https://github.com/jhonatanllima"
+          target="blank" className="animate__animated  animate__fadeIn animate__delay-2s">
+          <FaGithub />
+        </a>
 
-          <a
-            href="https://www.linkedin.com/in/jhonatan-lima-75a2a0142/"
-            target="blank" className="animate__animated  animate__fadeIn animate__delay-3s">
-            <FaLinkedin />
-          </a>
+        <a
+          href="https://www.linkedin.com/in/jhonatan-lima-75a2a0142/"
+          target="blank" className="animate__animated  animate__fadeIn animate__delay-3s">
+          <FaLinkedin />
+        </a>
 
-          <a
-            href="https://wa.me/5515996759630?text=Hey Jhonatan! Vim através do seu portifólio!"
-            target="blank" className="animate__animated  animate__fadeIn animate__delay-4s">
-            <FaWhatsappSquare />
-          </a>
+        <a
+          href="https://wa.me/5515996759630?text=Hey Jhonatan! Vim através do seu portifólio!"
+          target="blank" className="animate__animated  animate__fadeIn animate__delay-4s">
+          <FaWhatsappSquare />
+        </a>
 
-          <a
-            href="https://www.facebook.com/jhonyllima/"
-            target="blank" className="animate__animated  animate__fadeIn animate__delay-5s">
-            <FaFacebookSquare />
-          </a>
-        </section>
-      </div>
+        <a
+          href="https://www.facebook.com/jhonyllima/"
+          target="blank" className="animate__animated  animate__fadeIn animate__delay-5s">
+          <FaFacebookSquare />
+        </a>
+      </section>
     </S.Container>);
 }
