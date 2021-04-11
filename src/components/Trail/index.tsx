@@ -22,8 +22,7 @@ export function Trail() {
           <aside>
             <h2>iCLouds Sistemas Web</h2>
             <p>
-              Já formado, com um dos meus melhores amigos trabalhando na empresa, fiz a nlw 2 da Rocketseat, 
-              orientado a ele. Então tomei a maior decisão e mais difícil da minha vida! Deixar a gerência do banco
+              Já formado,  fiz a nlw 2 da Rocketseat. Então tomei a maior decisão e mais difícil da minha vida! Deixar a gerência do banco
               pra seguir meu sonho de ser, como costumo dizer " o objetico é ser Full Front!!"
             </p>
 
@@ -100,7 +99,7 @@ export function Trail() {
             <p>
               Datamétrica me fez entender o tipo de profissional que sou, a partir disso entendi
               os voôs que podia alcançar. Com essa experiência de liderança me torenei extremamente
-              focado, comunicativo, e responsável, evoluindo tanto na faculdade Análise e Desnvilvimento
+              focado, comunicativo, e responsável, evoluindo tanto na faculdade Análise e Desenvolvimento
               de sistemas, quanto na vida pessoal
               Foi meu primeiro emprego e sou muito grato a essa empresa.
          

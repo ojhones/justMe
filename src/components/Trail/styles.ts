@@ -123,7 +123,7 @@ export const Container = styled.div`
       h2 {
         margin: 2rem 0;
 
-        font-size: 1.5rem;
+        font-size: 2rem;
         text-transform: uppercase;
       }
 
@@ -131,8 +131,7 @@ export const Container = styled.div`
         margin-top: 1rem;
         padding-right: 2.5rem;
 
-        font-size: 0.9rem;
-        line-height: 1.4;
+        font-size: 1rem;
         font-weight: lighter;
         color: var(--gray-300);
         letter-spacing: 0.2rem;
