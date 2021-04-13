@@ -97,13 +97,13 @@ export function Trail() {
 
             <p>
               Fiquei pouco menos de 1 ano  como operador de telemarketing e como almejava
-              alcancei o cargo de liderança. Monitoria de qualidade em antdimento ao cliente!
+              alcancei o cargo de liderança. Monitoria de qualidade em atendimento ao cliente!
             </p>
 
             <p>
               Datamétrica me fez entender o tipo de profissional que sou, a partir disso entendi
-              os voôs que podia alcançar. Com essa experiência de liderança me torenei extremamente
-              focado, comunicativo e responsável, evoluindo tanto na faculdade Análise e Desenvolvimento
+              os voôs que podia alcançar. Com essa experiência de liderança me tornei extremamente
+              focado, comunicativo e responsável, evoluindo tanto na faculdade de Análise e Desenvolvimento
               de sistemas, quanto na vida pessoal.
               Foi meu primeiro emprego e sou muito grato a essa empresa.
             </p>
