@@ -31,7 +31,7 @@ export const Wrapper = styled.div`
     width: 100%;
     height: auto;
     max-width: 1100px;
-    padding: 1rem 1rem;
+    padding: 0rem 1rem;
 
     display: flex;
     align-items: center;
