@@ -24,7 +24,7 @@ export default function projects() {
 
         <main>
           <div>
-            <h2>Desenvolvido em React js</h2>
+            <h2>Tecnologias utilizadas</h2>
             <p>
               Mussum Ipsum, cacilds vidis litro abertis. Aenean aliquam molestie leo,
               vitae iaculis nisl. Tá deprimidis, eu conheço uma cachacis que pode alegrar
@@ -38,7 +38,7 @@ export default function projects() {
           </div>
 
           <div>
-            <h2>Desenvolvido em React js</h2>
+            <h2>Aprendizados com o projeto</h2>
             <p>
               Mussum Ipsum, cacilds vidis litro abertis. Aenean aliquam molestie leo,
               vitae iaculis nisl. Tá deprimidis, eu conheço uma cachacis que pode alegrar
