@@ -70,8 +70,20 @@ export const Wrapper = styled.div`
     position: relative;
 
     width: 100%;
+    height: auto;
     padding: 0 1rem;
     margin-top: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      + div {
+        margin-left: 3rem;
+        margin-top: 5rem;
+      }
+    }
 
     h2 {
       margin: 1rem 0;
@@ -85,6 +97,7 @@ export const Wrapper = styled.div`
 
     a {
       right: 2rem;
+      bottom: -4rem;
       position: absolute;
       svg {
         width: 4rem;
