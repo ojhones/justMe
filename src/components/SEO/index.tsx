@@ -48,7 +48,7 @@ const SEO: FC<SEOProps> = ({
       <meta property="og:description" content={description} />
       <meta property="og:locale" content="pt_BR" />
       <meta property="og:type" content={ogType || 'website'} />
-      <meta property="og:site_name" content="TOBRUXO" />
+      <meta property="og:site_name" content="Just Me" />
       <meta property="og:image" content={pageImage} />
       {/* <meta property="og:image:secure_url" content={pageImage} /> */}
       <meta property="og:image:alt" content={altImage || 'Imagem destaque'} />
@@ -58,8 +58,8 @@ const SEO: FC<SEOProps> = ({
 
       <meta name="twitter:title" content={title} />
       <meta name="twitter:card" content={pageImage} />
-      <meta name="twitter:site" content="@to_bruxo" />
-      <meta name="twitter:creator" content="@to_bruxo" />
+      <meta name="twitter:site" content="@jhony_lima_" />
+      <meta name="twitter:creator" content="@jhony_lima_" />
       <meta name="twitter:image" content={pageImage} />
       <meta name="twitter:image:src" content={pageImage} />
       <meta name="twitter:image:alt" content={altImage || 'Imagem destaque'} />
