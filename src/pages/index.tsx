@@ -40,7 +40,7 @@ export default function Home() {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/jhonatan-lima-75a2a0142/"
+              href="https://www.linkedin.com/in/jhonatan-lima"
               target="blank" className="animate__animated  animate__fadeIn animate__delay-3s">
               <FaLinkedin />
             </a>
