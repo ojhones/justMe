@@ -12,7 +12,8 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
+  padding: 0 1rem;
   min-height: calc(100vh - 5rem);
 
   display: flex;
@@ -21,7 +22,7 @@ export const Wrapper = styled.div`
 
   h1 {
     width: 100%;
-    margin-top: 3rem;
+    margin: 2.5rem;
     padding-left: 1rem;
 
     text-align: start;
@@ -34,6 +35,7 @@ export const Wrapper = styled.div`
     padding: 0rem 1rem;
 
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 
@@ -44,13 +46,25 @@ export const Wrapper = styled.div`
       height: 22rem;
       border: 3px solid var(--gray-800);
 
+      @media (max-width: 768px) {
+        margin: 0;
+      }
+
       + div {
         margin-top: 3rem;
         margin-left: 3rem;
+
+        @media (max-width: 768px) {
+          margin-left: -7rem;
+        }
       }
 
       :last-child {
         margin-top: 6rem;
+        @media (max-width: 768px) {
+          margin-top: 3rem;
+          margin-left: 4rem;
+        }
       }
 
       img {
@@ -78,27 +92,57 @@ export const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
 
+    @media (max-width: 933px) {
+      padding: 0 5rem;
+      margin-top: 8rem;
+      flex-direction: column;
+    }
+
+    @media (max-width: 768px) {
+      padding: 0 1rem;
+    }
+
     div {
+      padding: 2rem 3rem;
+      border-top: 3px solid var(--gray-800);
+      border-left: 3px solid var(--gray-800);
+
       + div {
-        margin-left: 3rem;
         margin-top: 5rem;
+        margin-left: 5rem;
+        margin-right: -1rem;
+
+        border-top: 0;
+        border-left: 0;
+        border-right: 3px solid var(--gray-800);
+        border-bottom: 3px solid var(--gray-800);
+
+        text-align: end;
+
+        @media (max-width: 768px) {
+          margin-left: 0;
+        }
+      }
+
+      h2 {
+        margin: 1rem 0;
+      }
+
+      p {
+        margin: 0.5rem 0;
+        color: var(--gray-300);
       }
     }
 
-    h2 {
-      margin: 1rem 0;
-      color: var(--gray-300);
-    }
-
-    p {
-      margin: 0.5rem 0;
-      color: var(--gray-300);
-    }
-
     a {
-      right: 2rem;
-      bottom: -4rem;
+      right: 0;
+      bottom: -5rem;
       position: absolute;
+
+      @media (max-width: 933px) {
+        right: 2rem;
+      }
+
       svg {
         width: 4rem;
         height: 4rem;
