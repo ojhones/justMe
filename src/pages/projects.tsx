@@ -10,15 +10,15 @@ export default function projects() {
 
         <head>
           <div >
-            <img src="/images/jhonatanLima.jpg" alt="" className="animate__animated animate__fadeInDown animate__delay-1s" />
+            <img src="/images/jhonatanLima.jpg" alt="" className="animate__animated animate__fadeInRight animate__delay-1s" />
           </div>
 
           <div >
-            <img src="/images/jhonatanLima.jpg" alt="" className="animate__animated animate__fadeInDown animate__delay-2s" />
+            <img src="/images/jhonatanLima.jpg" alt="" className="animate__animated animate__fadeInRight animate__delay-2s" />
           </div>
 
           <div >
-            <img src="/images/jhonatanLima.jpg" alt="" className="animate__animated animate__fadeInDown animate__delay-3s" />
+            <img src="/images/jhonatanLima.jpg" alt="" className="animate__animated animate__fadeInRight animate__delay-3s" />
           </div>
         </head>
 

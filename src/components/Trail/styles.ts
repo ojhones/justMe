@@ -10,15 +10,6 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  + div {
-    margin-top: -11rem;
-    min-height: auto;
-
-    @media (max-width: 791px) {
-      margin-top: -4rem;
-    }
-  }
-
   a {
     svg {
       width: 4rem;
@@ -188,6 +179,43 @@ export const Container = styled.div`
 
         p {
           text-align: end;
+        }
+      }
+    }
+
+    :last-child {
+      flex-direction: row;
+
+      @media (max-width: 791px) {
+        margin-top: 5rem;
+        flex-direction: column;
+      }
+
+      div {
+        img {
+          position: relative;
+          left: -5rem;
+
+          @media (max-width: 791px) {
+            right: 2rem;
+          }
+        }
+
+        h3 {
+          left: -3rem;
+          bottom: 0rem;
+          position: absolute;
+        }
+      }
+
+      aside {
+        h2 {
+          text-align: left;
+          margin-right: 3rem;
+        }
+
+        p {
+          text-align: left;
         }
       }
     }

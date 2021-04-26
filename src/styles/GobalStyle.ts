@@ -17,7 +17,7 @@ export default createGlobalStyle`
     --gray-1000: #080808;
 
     --animate-delay: 1s;
-    --animate-duration: 900ms;
+    --animate-duration: 500ms;
   }
 
   html {
