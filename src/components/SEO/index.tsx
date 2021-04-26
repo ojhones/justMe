@@ -21,10 +21,8 @@ const SEO: FC<SEOProps> = ({
   ogType,
   image,
   altImage,
-  // shouldExcludeTitleSuffix = false,
   shouldIndexPage = true,
 }) => {
-  // const pageTitle = `${title} ${!shouldExcludeTitleSuffix ? '- ABQM' : ''}`;
   const pageImage =
     image || 'images/mao.jpg';
 
@@ -36,25 +34,12 @@ const SEO: FC<SEOProps> = ({
       <meta name="description" content={description} />
       <meta name="image" content={pageImage} />
 
-
-      {/* <meta httpEquiv="x-ua-compatible" content="IE=edge,chrome=1" /> */}
-      {/* <meta name="MobileOptimized" content="320" /> */}
-      {/* <meta name="HandheldFriendly" content="True" /> */}
-      {/* <meta name="msapplication-TileColor" content="#121214" /> */}
-      {/* <meta name="referrer" content="no-referrer-when-downgrade" /> */}
-      {/* <meta name="google" content="notranslate" /> */}
-
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:locale" content="pt_BR" />
       <meta property="og:type" content={ogType || 'website'} />
-<<<<<<< HEAD
-      <meta property="og:site_name" content="JUST ME" />
-=======
       <meta property="og:site_name" content="Just Me" />
->>>>>>> develop
       <meta property="og:image" content={pageImage} />
-      {/* <meta property="og:image:secure_url" content={pageImage} /> */}
       <meta property="og:image:alt" content={altImage || 'Imagem destaque'} />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="1200" />

@@ -15,7 +15,7 @@ export function Trail() {
       </h1>
 
       {data.map(company => (
-        <main>
+        <main key={company.id}>
 
           <div className="animate__animated  animate__fadeIn">
             <img
