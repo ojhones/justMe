@@ -1,5 +1,8 @@
 import Lottie from 'react-lottie'
-import { FaWhatsappSquare, FaLinkedin, FaFacebookSquare, FaGithub } from 'react-icons/fa'
+
+import {
+  SocialsMidia
+} from '../components'
 
 import animationData from '../../public/animations/404.json'
 
@@ -32,6 +35,7 @@ export default function Custom404() {
       </h2>
 
       <section>
+<<<<<<< HEAD
         <a
           href="https://github.com/jhonatanllima"
           target="blank" className="animate__animated  animate__fadeIn animate__delay-2s">
@@ -55,6 +59,9 @@ export default function Custom404() {
           target="blank" className="animate__animated  animate__fadeIn animate__delay-5s">
           <FaFacebookSquare />
         </a>
+=======
+        <SocialsMidia />
+>>>>>>> develop
       </section>
     </S.Container>);
 }

@@ -1,8 +1,9 @@
 import Typewriter from 'typewriter-effect'
-import { FaWhatsappSquare, FaLinkedin, FaFacebookSquare, FaGithub } from 'react-icons/fa'
+
 
 import {
-  Trail
+  Trail,
+  SocialsMidia
 } from '../components'
 
 import * as S from '../styles/pages/index'
@@ -33,6 +34,7 @@ export default function Home() {
           </p>
 
           <section>
+<<<<<<< HEAD
             <a
               href="https://github.com/jhonatanllima"
               target="blank" className="animate__animated  animate__fadeIn animate__delay-2s">
@@ -56,6 +58,9 @@ export default function Home() {
               target="blank" className="animate__animated  animate__fadeIn animate__delay-5s">
               <FaFacebookSquare />
             </a>
+=======
+            <SocialsMidia />
+>>>>>>> develop
           </section>
         </aside>
 

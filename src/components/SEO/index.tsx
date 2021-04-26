@@ -48,7 +48,11 @@ const SEO: FC<SEOProps> = ({
       <meta property="og:description" content={description} />
       <meta property="og:locale" content="pt_BR" />
       <meta property="og:type" content={ogType || 'website'} />
+<<<<<<< HEAD
       <meta property="og:site_name" content="JUST ME" />
+=======
+      <meta property="og:site_name" content="Just Me" />
+>>>>>>> develop
       <meta property="og:image" content={pageImage} />
       {/* <meta property="og:image:secure_url" content={pageImage} /> */}
       <meta property="og:image:alt" content={altImage || 'Imagem destaque'} />
