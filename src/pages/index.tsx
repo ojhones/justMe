@@ -1,6 +1,5 @@
 import Typewriter from 'typewriter-effect'
 
-
 import {
   Trail,
   SocialsMidia
