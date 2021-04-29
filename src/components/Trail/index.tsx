@@ -1,10 +1,9 @@
 import { data } from './data'
 
-import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 import ReactHtmlParser from 'react-html-parser';
+import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 
 import * as S from './styles'
-
 
 export function Trail() {
   return (
@@ -19,10 +18,10 @@ export function Trail() {
 
           <div className="animate__animated  animate__fadeIn">
             <img
-              src={company.image} alt={company.altImage}
+              src={company.image}
+              alt={company.altImage}
               className={company.animation}
             />
-
             <h3>{company.hashCompany}</h3>
           </div>
 

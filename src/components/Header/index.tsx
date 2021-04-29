@@ -23,8 +23,17 @@ export function Header() {
         </aside>
 
         <nav>
-          <Link href="/">Home</Link>
-          <Link href="/projects">Projects</Link>
+          <Link href="/">
+            <a>
+              Home
+            </a>
+          </Link>
+
+          <Link href="/projects">
+            <a>
+              Projects
+            </a>
+          </Link>
         </nav>
       </div>
     </S.Container>
