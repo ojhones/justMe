@@ -1,58 +1,49 @@
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 
+import { data } from './api/dataProjects'
+
 import * as S from '../styles/pages/projects'
 
 export default function projects() {
   return (
     <S.Container>
-      <S.Wrapper>
-        <h1>Consulta De animais</h1>
+      {data.map(project => (
+        <S.Wrapper key={project.id}>
+          <h1>{project.title}</h1>
 
-        <head>
-          <div >
-            <img src="/images/jhonatanLima.jpg" alt="" className="animate__animated animate__fadeInRight animate__delay-1s" />
-          </div>
+          <head>
+            <div >
+              <img src={project.img1} alt={project.title} className={project.animationImg1} />
+            </div>
 
-          <div >
-            <img src="/images/jhonatanLima.jpg" alt="" className="animate__animated animate__fadeInRight animate__delay-2s" />
-          </div>
+            <div >
+              <img src={project.img2} alt={project.title} className={project.animationImg2} />
+            </div>
 
-          <div >
-            <img src="/images/jhonatanLima.jpg" alt="" className="animate__animated animate__fadeInRight animate__delay-3s" />
-          </div>
-        </head>
+            <div >
+              <img src={project.img3} alt={project.title} className={project.animationImg3} />
+            </div>
+          </head>
 
-        <main>
-          <div>
-            <h2>Tecnologias utilizadas</h2>
-            <p>
-              Mussum Ipsum, cacilds vidis litro abertis. Aenean aliquam molestie leo,
-              vitae iaculis nisl. Tá deprimidis, eu conheço uma cachacis que pode alegrar
-              sua vidis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis
-              e fermentis. Quem num gosta di mim que vai caçá sua turmis!Mussum Ipsum, cacilds
-              vidis litro abertis. Aenean aliquam molestie leo, vitae iaculis nisl.
-              Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Suco de
-              cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Quem
-              num gosta di mim que vai caçá sua turmis!
-          </p>
-          </div>
+          <main>
+            <div>
+              <h2>{project.tecnologies}</h2>
+              <p>
+                {project.descriptionTeconologies}
+              </p>
+            </div>
 
-          <div>
-            <h2>Aprendizados com o projeto</h2>
-            <p>
-              Mussum Ipsum, cacilds vidis litro abertis. Aenean aliquam molestie leo,
-              vitae iaculis nisl. Tá deprimidis, eu conheço uma cachacis que pode alegrar
-              sua vidis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis
-              e fermentis. Quem num gosta di mim que vai caçá sua turmis!Mussum Ipsum, cacilds
-              vidis litro abertis. Aenean aliquam molestie leo, vitae iaculis nisl.
-              Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Suco de
-              cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Quem
-              num gosta di mim que vai caçá sua turmis!
-          </p>
-          </div>
-          <a href="https://www.linkedin.com/company/datametrica/" target="blank"><HiOutlineArrowNarrowRight /></a>
-        </main>
-      </S.Wrapper>
+            <div>
+              <h2>{project.learning}</h2>
+              <p>
+                {project.descriptionLearning}
+              </p>
+            </div>
+            <a href={project.urlProject} target={project.targetUrl}><HiOutlineArrowNarrowRight /></a>
+          </main>
+
+        </S.Wrapper>
+      ))}
     </S.Container>
   )
 }
