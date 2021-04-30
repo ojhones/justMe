@@ -6,6 +6,11 @@ export const Container = styled.div`
 
   min-height: 100vh;
 
+  .parallax-inner,
+  .parallax-outer {
+    border: none;
+  }
+
   footer {
     bottom: 0;
     position: absolute;

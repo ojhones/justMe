@@ -10,6 +10,13 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
 
+  .parallax-inner,
+  .parallax-outer {
+    width: 100%;
+    height: auto;
+    border: none;
+  }
+
   a {
     svg {
       width: 4rem;

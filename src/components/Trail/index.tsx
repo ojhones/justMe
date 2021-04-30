@@ -24,28 +24,36 @@ export function Trail() {
         <main key={company.id}>
 
           <div className="animate__animated  animate__fadeIn">
+
             <img
               src={company.image}
               alt={company.altImage}
               className={company.animation}
             />
+
             <h3>{company.hashCompany}</h3>
           </div>
 
           <aside>
-            <h2>{company.title}</h2>
+            <Parallax x={[20, -20]}>
+              <h2>{company.title}</h2>
+            </Parallax>
+
 
             {ReactHtmlParser(company.resume)}
 
-            <a
-              href={company.urlCompany}
-              target={company.targetUrl}>
-              <HiOutlineArrowNarrowRight />
-            </a>
+            <Parallax x={[-60, 20]}>
+              <a
+                href={company.urlCompany}
+                target={company.targetUrl}>
+                <HiOutlineArrowNarrowRight />
+              </a>
+            </Parallax>
           </aside>
 
         </main>
-      ))}
-    </S.Container>
+      ))
+      }
+    </S.Container >
   )
 }

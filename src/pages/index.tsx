@@ -21,7 +21,7 @@ export default function Home() {
               Esse é o meu portfólio, criado com as melhores práticas e tecnologias
               que conheço no momento e, sinceramente, farei desse "conheço no momento"
               meu eterno aprendizado!
-              </Parallax>
+            </Parallax>
           </p>
 
           <section>
@@ -31,14 +31,16 @@ export default function Home() {
 
         <aside>
           <div className="animate__animated  animate__fadeIn">
+            <Parallax y={[10, -10]}>
+              <Parallax x={[10, -10]}>
+                <img
+                  src="/images/jhonatanLima.jpg" alt="Jhonatan Lima!"
+                  className="animate__animated  animate__fadeIn animate__delay-1s"
+                />
+              </Parallax>
+            </Parallax>
 
-            <img
-              src="/images/jhonatanLima.jpg" alt="Jhonatan Lima!"
-              className="animate__animated  animate__fadeIn animate__delay-1s"
-            />
-
-            <h3>Jhonatan</h3>
-
+            <h3> Jhonatan </h3>
           </div>
         </aside>
       </S.Wrapper>
