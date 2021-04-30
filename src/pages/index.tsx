@@ -13,7 +13,7 @@ export default function Home() {
       <S.Wrapper>
         <aside>
           <h1 className="animate__animated  animate__fadeIn">
-            <Parallax y={[-420, 120]}>Jhonatan Lima</Parallax>
+            <Parallax y={[0, -100]}>Jhonatan Lima</Parallax>
           </h1>
 
           <p className="animate__animated  animate__fadeIn">
