@@ -39,6 +39,8 @@ export const Wrapper = styled.div`
     }
 
     h1 {
+      z-index: 5;
+
       margin-top: 0.2rem;
 
       font-weight: 900;
@@ -51,6 +53,8 @@ export const Wrapper = styled.div`
     }
 
     p {
+      z-index: 4;
+
       max-width: 450px;
       margin-top: 1rem;
 

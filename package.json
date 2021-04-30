@@ -17,6 +17,7 @@
     "react-html-parser": "^2.0.2",
     "react-icons": "^4.2.0",
     "react-lottie": "^1.2.3",
+    "react-scroll-parallax": "^2.4.0",
     "styled-components": "^5.2.3",
     "typewriter-effect": "^2.17.0"
   },

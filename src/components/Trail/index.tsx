@@ -1,6 +1,7 @@
 import { data } from './data'
 
 import ReactHtmlParser from 'react-html-parser';
+import { Parallax } from 'react-scroll-parallax';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 
 import * as S from './styles'
@@ -9,8 +10,14 @@ export function Trail() {
   return (
     <S.Container>
       <h1>
-        <span>Front</span>
+
+        <span>
+          <Parallax x={[-10, 10]}>Front</Parallax>
+        </span>
+
+        <Parallax x={[-10, 40]}>
           Just me
+        </Parallax>
       </h1>
 
       {data.map(company => (
