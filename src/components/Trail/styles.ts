@@ -23,6 +23,8 @@ export const Container = styled.div`
       &:hover {
         cursor: pointer;
         filter: brightness(1.8);
+
+        transform: translateX(15%);
       }
     }
     + a {
@@ -111,8 +113,9 @@ export const Container = styled.div`
 
         font-size: 3rem;
         letter-spacing: 1rem;
-        color: var(--gray-800);
+        color: var(--blue-100);
         transform: rotate(90deg);
+        transition: letter-spacing 0.2s;
       }
     }
 

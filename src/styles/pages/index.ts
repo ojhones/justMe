@@ -107,7 +107,7 @@ export const Wrapper = styled.div`
 
           font-size: 3rem;
           letter-spacing: 1rem;
-          color: var(--gray-800);
+          color: var(--blue-100);
           transform: rotate(90deg);
         }
       }

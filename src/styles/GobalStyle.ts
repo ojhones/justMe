@@ -10,12 +10,14 @@ export default createGlobalStyle`
   :root {
     --white: #ffffff;
 
+    --blue-100: #67A9C4;
+
     --gray-100: #e1e1e6;
     --gray-300: #a8a8b3;
     --gray-800: #29292e;
     --gray-900: #121214;
     --gray-1000: #080808;
-
+    
     --animate-delay: 1s;
     --animate-duration: 500ms;
   }
