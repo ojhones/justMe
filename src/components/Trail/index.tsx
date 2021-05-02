@@ -41,7 +41,7 @@ export function Trail() {
               </Parallax>
             </Parallax>
 
-            <Parallax y={[-25, 15]}>
+            <Parallax y={[-20, 15]}>
               {ReactHtmlParser(company.resume)}
             </Parallax>
 
