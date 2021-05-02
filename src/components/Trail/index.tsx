@@ -15,7 +15,7 @@ export function Trail() {
           <Parallax x={[-10, 10]}>Front</Parallax>
         </span>
 
-        <Parallax x={[-10, 40]}>
+        <Parallax x={[-30, 0]}>
           Just me
         </Parallax>
       </h1>
@@ -24,23 +24,26 @@ export function Trail() {
         <main key={company.id}>
 
           <div className="animate__animated  animate__fadeIn">
-
             <img
               src={company.image}
               alt={company.altImage}
               className={company.animation}
             />
 
+
             <h3>{company.hashCompany}</h3>
           </div>
 
           <aside>
-            <Parallax x={[20, -20]}>
-              <h2>{company.title}</h2>
+            <Parallax x={[40, -20]}>
+              <Parallax y={[-100, 50]}>
+                <h2>{company.title}</h2>
+              </Parallax>
             </Parallax>
 
-
-            {ReactHtmlParser(company.resume)}
+            <Parallax y={[-25, 15]}>
+              {ReactHtmlParser(company.resume)}
+            </Parallax>
 
             <Parallax x={[-60, 20]}>
               <a

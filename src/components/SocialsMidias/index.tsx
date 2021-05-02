@@ -6,7 +6,7 @@ import * as S from './styles'
 export function SocialsMidia() {
   return (
     <S.Container>
-      <Parallax x={[45, -150]}>
+      <Parallax y={[-20, 20]}>
         <a
           href="https://github.com/jhonatanllima"
           target="blank" className="animate__animated  animate__fadeIn animate__delay-2s">
@@ -14,7 +14,7 @@ export function SocialsMidia() {
         </a>
       </Parallax>
 
-      <Parallax x={[50, -120]}>
+      <Parallax y={[-30, 40]}>
         <a
           href="https://www.linkedin.com/in/jhonatan-lima-75a2a0142/"
           target="blank" className="animate__animated  animate__fadeIn animate__delay-3s">
@@ -22,7 +22,7 @@ export function SocialsMidia() {
         </a>
       </Parallax>
 
-      <Parallax x={[60, -100]}>
+      <Parallax y={[-45, 60]}>
         <a
           href="https://wa.me/5515996759630?text=Hey Jhonatan! Vim através do seu portifólio!"
           target="blank" className="animate__animated  animate__fadeIn animate__delay-4s">
@@ -30,7 +30,7 @@ export function SocialsMidia() {
         </a>
       </Parallax>
 
-      <Parallax x={[45, -60]}>
+      <Parallax y={[-60, 80]}>
         <a
           href="https://www.facebook.com/jhonyllima/"
           target="blank" className="animate__animated  animate__fadeIn animate__delay-5s">
