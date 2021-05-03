@@ -1,3 +1,4 @@
+
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 
 import { data } from './api/dataProjects'
@@ -15,6 +16,7 @@ export default function projects() {
             <div >
               <img src={project.img1} alt={project.title} className={project.animationImg1} />
             </div>
+
 
             <div >
               <img src={project.img2} alt={project.title} className={project.animationImg2} />
