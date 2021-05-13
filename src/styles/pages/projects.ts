@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  padding-bottom: 5rem;
+  padding-bottom: 12rem;
   min-height: calc(100vh - 5rem);
 
   display: flex;
@@ -66,6 +66,11 @@ export const Wrapper = styled.div`
 
       :last-child {
         margin-top: 6rem;
+
+        img {
+          object-fit: contain;
+        }
+
         @media (max-width: 768px) {
           margin-top: 5rem;
           margin-right: 7rem;
@@ -80,7 +85,13 @@ export const Wrapper = styled.div`
         width: 100%;
         height: 100%;
 
+        transition: 0.2s;
         object-fit: cover;
+
+        :hover {
+          top: 0;
+          transform: translateX(-13%);
+        }
       }
     }
   }
@@ -109,8 +120,19 @@ export const Wrapper = styled.div`
 
     div {
       padding: 2rem 3rem;
+
       border-top: 3px solid var(--gray-800);
       border-left: 3px solid var(--gray-800);
+
+      transition: 0.3s;
+
+      :hover {
+        transform: translateX(-13%);
+
+        @media (max-width: 1024px) {
+          transform: translateX(0);
+        }
+      }
 
       + div {
         margin-top: 5rem;
@@ -119,10 +141,19 @@ export const Wrapper = styled.div`
 
         border-top: 0;
         border-left: 0;
-        border-right: 3px solid var(--gray-800);
         border-bottom: 3px solid var(--gray-800);
+        border-right: 3px solid var(--gray-800);
 
         text-align: end;
+        transition: 0.3s;
+
+        :hover {
+          transform: translateX(13%);
+
+          @media (max-width: 1024px) {
+            transform: translateX(0);
+          }
+        }
 
         @media (max-width: 768px) {
           margin-left: 0;
@@ -144,8 +175,17 @@ export const Wrapper = styled.div`
       bottom: -5rem;
       position: absolute;
 
+      transition: 0.2s;
+
       @media (max-width: 933px) {
         right: 2rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+        filter: brightness(1.8);
+
+        transform: translateX(15%);
       }
 
       svg {

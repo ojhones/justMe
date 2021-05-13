@@ -1,6 +1,7 @@
 import { data } from './data'
 
 import ReactHtmlParser from 'react-html-parser';
+import { Parallax } from 'react-scroll-parallax';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 
 import * as S from './styles'
@@ -9,8 +10,14 @@ export function Trail() {
   return (
     <S.Container>
       <h1>
-        <span>Front</span>
+
+        <span>
+          <Parallax x={[-10, 10]}>Front</Parallax>
+        </span>
+
+        <Parallax x={[-30, 0]}>
           Just me
+        </Parallax>
       </h1>
 
       {data.map(company => (
@@ -22,23 +29,34 @@ export function Trail() {
               alt={company.altImage}
               className={company.animation}
             />
+
+
             <h3>{company.hashCompany}</h3>
           </div>
 
           <aside>
-            <h2>{company.title}</h2>
+            <Parallax x={[40, -20]}>
+              <Parallax y={[-100, 50]}>
+                <h2>{company.title}</h2>
+              </Parallax>
+            </Parallax>
 
-            {ReactHtmlParser(company.resume)}
+            <Parallax y={[-20, 15]}>
+              {ReactHtmlParser(company.resume)}
+            </Parallax>
 
-            <a
-              href={company.urlCompany}
-              target={company.targetUrl}>
-              <HiOutlineArrowNarrowRight />
-            </a>
+            <Parallax x={[-60, 20]}>
+              <a
+                href={company.urlCompany}
+                target={company.targetUrl}>
+                <HiOutlineArrowNarrowRight />
+              </a>
+            </Parallax>
           </aside>
 
         </main>
-      ))}
-    </S.Container>
+      ))
+      }
+    </S.Container >
   )
 }

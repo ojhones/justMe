@@ -10,6 +10,18 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
 
+  .parallax-inner,
+  .parallax-outer {
+    width: 100%;
+    height: auto;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   a {
     svg {
       width: 4rem;
@@ -23,6 +35,8 @@ export const Container = styled.div`
       &:hover {
         cursor: pointer;
         filter: brightness(1.8);
+
+        transform: translateX(15%);
       }
     }
     + a {
@@ -111,8 +125,9 @@ export const Container = styled.div`
 
         font-size: 3rem;
         letter-spacing: 1rem;
-        color: var(--gray-800);
+        color: var(--blue-100);
         transform: rotate(90deg);
+        transition: letter-spacing 0.2s;
       }
     }
 

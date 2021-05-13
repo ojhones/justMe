@@ -3,6 +3,25 @@ import styled from "styled-components";
 export const Container = styled.div`
   overflow: hidden;
   position: relative;
+
+  min-height: 100vh;
+
+  .parallax-inner,
+  .parallax-outer {
+    border: none;
+  }
+
+  footer {
+    bottom: 0;
+    position: absolute;
+
+    width: 100%;
+    padding: 3rem 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const AnimationTop = styled.div`
