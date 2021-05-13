@@ -66,6 +66,11 @@ export const Wrapper = styled.div`
 
       :last-child {
         margin-top: 6rem;
+
+        img {
+          object-fit: contain;
+        }
+
         @media (max-width: 768px) {
           margin-top: 5rem;
           margin-right: 7rem;
