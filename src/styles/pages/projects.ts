@@ -88,8 +88,12 @@ export const Wrapper = styled.div`
         transition: 0.2s;
         object-fit: cover;
 
+        transition: 0.2s;
+        filter: grayscale(1);
+
         :hover {
           top: 0;
+          filter: grayscale(0);
           transform: translateX(-13%);
         }
       }
