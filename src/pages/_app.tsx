@@ -64,8 +64,6 @@ function MyApp({ Component, pageProps }) {
 
         <Component {...pageProps} />
 
-
-
         <footer>
           <Typewriter
             onInit={Array}
