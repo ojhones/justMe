@@ -92,9 +92,7 @@ export const Wrapper = styled.div`
         filter: grayscale(1);
 
         :hover {
-          top: 0;
           filter: grayscale(0);
-          transform: translateX(-13%);
         }
       }
     }

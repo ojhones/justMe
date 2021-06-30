@@ -35,15 +35,13 @@ export function Trail() {
           </div>
 
           <aside>
-            <Parallax x={[40, -20]}>
-              <Parallax y={[-100, 50]}>
-                <h2>{company.title}</h2>
-              </Parallax>
-            </Parallax>
 
-            <Parallax y={[-20, 15]}>
-              {ReactHtmlParser(company.resume)}
-            </Parallax>
+            <h2>{company.title}</h2>
+
+
+
+            {ReactHtmlParser(company.resume)}
+
 
             <Parallax x={[-60, 20]}>
               <a
