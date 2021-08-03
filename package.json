@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@prismicio/client": "^5.1.0",
     "@types/react-html-parser": "^2.0.1",
     "@types/react-lottie": "^1.2.5",
     "animate.css": "^4.1.1",

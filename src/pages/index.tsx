@@ -1,4 +1,6 @@
-import { Parallax } from "react-scroll-parallax";
+import { GetStaticProps } from "next";
+import Prismic from "@prismicio/client";
+import { getPrismicClient } from "../services/prismic";
 
 import { Trail, SocialsMidia } from "../components";
 
@@ -35,3 +37,26 @@ export default function Home() {
     </S.Container>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const prismic = getPrismicClient();
+
+  const response = await prismic.query(
+    [Prismic.predicates.at("document.type", "justme")],
+    {
+      fetch: [
+        "justme.title",
+        "justme.resume",
+        "justme.profileimage",
+        "justme.verticalname",
+      ],
+      pageSize: 100,
+    }
+  );
+
+  // console.log("response", JSON.stringify(response, null, 2));
+
+  return {
+    props: {},
+  };
+};
