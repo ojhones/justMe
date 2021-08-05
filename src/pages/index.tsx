@@ -50,13 +50,6 @@ export default function Home({ formatedProfile }: ProfileProps) {
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  return {
-    paths: [],
-    fallback: "blocking",
-  };
-};
-
 export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient();
 
