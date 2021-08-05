@@ -81,6 +81,7 @@ export const getStaticProps: GetStaticProps = async () => {
     title: dataProfile[0].title,
     imageProfile: dataProfile[0].imageProfile,
     resume: dataProfile[0].resume,
+    verticalName: dataProfile[0].verticalName,
   };
 
   // console.log("response", JSON.stringify(response, null, 2));
@@ -90,5 +91,6 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       formatedProfile,
     },
+    revalidate: 60 * 60 * 24, //24h
   };
 };
