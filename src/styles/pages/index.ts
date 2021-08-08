@@ -80,8 +80,6 @@ export const Wrapper = styled.div`
       align-items: center;
 
       div {
-        position: relative;
-
         width: 25rem;
         height: 35rem;
 
@@ -94,10 +92,6 @@ export const Wrapper = styled.div`
         }
 
         img {
-          top: 2rem;
-          left: 2rem;
-          position: absolute;
-
           width: 100%;
           height: 100%;
 
