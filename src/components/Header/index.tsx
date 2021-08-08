@@ -1,9 +1,9 @@
-import Link from "next/link";
-import Lottie from "react-lottie";
+import Link from "next/link"
+import Lottie from "react-lottie"
 
-import animationData from "../../../public/animations/atom.json";
+import animationData from "../../../public/animations/atom.json"
 
-import * as S from "./styles";
+import * as S from "./styles"
 
 export function Header() {
   const defaultOptions = {
@@ -13,29 +13,25 @@ export function Header() {
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
-  };
+  }
 
   return (
-    <S.Container className="animate__animated  animate__fadeIn">
+    <S.Container>
       <div>
-        <aside className="animate__animated  animate__fadeInTopLeft animate__delay-1s">
+        <aside>
           <Lottie height={80} width={150} options={defaultOptions} />
         </aside>
 
         <nav>
           <Link href="/">
-            <a>
-              Home
-            </a>
+            <a>Home</a>
           </Link>
 
           <Link href="/projects">
-            <a>
-              Projects
-            </a>
+            <a>Projects</a>
           </Link>
         </nav>
       </div>
     </S.Container>
-  );
+  )
 }
