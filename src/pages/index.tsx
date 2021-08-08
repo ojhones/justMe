@@ -1,22 +1,22 @@
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps } from "next"
 
-import Prismic from "@prismicio/client";
-import { RichText } from "prismic-dom";
-import { getPrismicClient } from "../services/prismic";
+import Prismic from "@prismicio/client"
+import { RichText } from "prismic-dom"
+import { getPrismicClient } from "../services/prismic"
 
-import { Trail, SocialsMidia } from "../components";
+import { Trail, SocialsMidia } from "../components"
 
-import * as S from "../styles/pages/index";
+import * as S from "../styles/pages/index"
 
 type Profile = {
-  title: string;
-  resume: string;
-  altImage: string;
-  imageProfile: string;
-  verticalName: string;
-};
+  title: string
+  resume: string
+  altImage: string
+  imageProfile: string
+  verticalName: string
+}
 interface ProfileProps {
-  formatedProfile: Profile;
+  formatedProfile: Profile
 }
 
 export default function Home({ formatedProfile }: ProfileProps) {
@@ -47,11 +47,11 @@ export default function Home({ formatedProfile }: ProfileProps) {
 
       <Trail />
     </S.Container>
-  );
+  )
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prismic = getPrismicClient();
+  const prismic = getPrismicClient()
 
   const response = await prismic.query(
     [Prismic.predicates.at("document.type", "justme")],
@@ -64,7 +64,7 @@ export const getStaticProps: GetStaticProps = async () => {
       ],
       pageSize: 100,
     }
-  );
+  )
 
   const dataProfile = response.results.map((profile) => {
     return {
@@ -73,8 +73,8 @@ export const getStaticProps: GetStaticProps = async () => {
       imageProfile: profile.data.profileimage.url,
       resume: RichText.asText(profile.data.resume),
       verticalName: RichText.asText(profile.data.verticalname),
-    };
-  });
+    }
+  })
 
   const formatedProfile = {
     altimage: dataProfile[0].altImage,
@@ -82,7 +82,7 @@ export const getStaticProps: GetStaticProps = async () => {
     imageProfile: dataProfile[0].imageProfile,
     resume: dataProfile[0].resume,
     verticalName: dataProfile[0].verticalName,
-  };
+  }
 
   // console.log("response", JSON.stringify(response, null, 2));
   // console.log("dataProfile", dataProfile);
@@ -92,5 +92,5 @@ export const getStaticProps: GetStaticProps = async () => {
       formatedProfile,
     },
     revalidate: 60 * 60 * 6, //24h
-  };
-};
+  }
+}
