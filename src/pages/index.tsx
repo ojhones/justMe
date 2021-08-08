@@ -1,37 +1,96 @@
-import { Parallax } from "react-scroll-parallax";
+import Image from "next/image"
+import { GetStaticProps } from "next"
+import { RichText } from "prismic-dom"
+import Prismic from "@prismicio/client"
 
-import { Trail, SocialsMidia } from "../components";
+import { Trail, SocialMedia } from "../components"
+import { getPrismicClient } from "../services/prismic"
 
-import * as S from "../styles/pages/index";
+import * as S from "../styles/pages/index"
 
-export default function Home() {
+type Profile = {
+  title: string
+  resume: string
+  altImage: string
+  verticalName: string
+  imageProfile: string
+}
+interface ProfileProps {
+  formattedProfile: Profile
+}
+
+export default function Home({ formattedProfile }: ProfileProps) {
   return (
     <S.Container>
       <S.Wrapper>
         <aside>
-          <h1>Jhonatan Lima</h1>
+          <h1>{formattedProfile.title}</h1>
 
-          <p>
-            Esse é o meu portfólio, criado com as melhores práticas e
-            tecnologias que conheço no momento e, sinceramente, farei desse
-            "conheço no momento" meu eterno aprendizado!
-          </p>
+          <p>{formattedProfile.resume}</p>
 
           <section>
-            <SocialsMidia />
+            <SocialMedia />
           </section>
         </aside>
 
         <aside>
           <div>
-            <img src="/images/jhonatanLima.jpg" alt="Jhonatan Lima!" />
+            <Image
+              width="auto"
+              height="auto"
+              objectFit="cover"
+              alt={formattedProfile.altImage}
+              src={formattedProfile.imageProfile}
+            />
 
-            <h3> Jhonatan </h3>
+            <h3>{formattedProfile.verticalName}</h3>
           </div>
         </aside>
       </S.Wrapper>
 
       <Trail />
     </S.Container>
-  );
+  )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const prismic = getPrismicClient()
+
+  const response = await prismic.query(
+    [Prismic.predicates.at("document.type", "justme")],
+    {
+      fetch: [
+        "justme.title",
+        "justme.resume",
+        "justme.profileimage",
+        "justme.verticalname",
+      ],
+      pageSize: 100,
+    }
+  )
+
+  const dataProfile = response.results.map((profile) => {
+    return {
+      altImage: profile.data.profileimage.alt,
+      title: RichText.asText(profile.data.title),
+      imageProfile: profile.data.profileimage.url,
+      resume: RichText.asText(profile.data.resume),
+      verticalName: RichText.asText(profile.data.verticalname),
+    }
+  })
+
+  const formattedProfile = {
+    altimage: dataProfile[0].altImage,
+    title: dataProfile[0].title,
+    imageProfile: dataProfile[0].imageProfile,
+    resume: dataProfile[0].resume,
+    verticalName: dataProfile[0].verticalName,
+  }
+
+  return {
+    props: {
+      formattedProfile,
+    },
+    revalidate: 60 * 60 * 6, //24h
+  }
 }

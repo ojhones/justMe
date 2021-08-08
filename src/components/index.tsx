@@ -1,11 +1,4 @@
-import { SEO } from './SEO'
-import { Trail } from './Trail'
-import { Header } from './Header'
-import { SocialsMidia } from './SocialsMidias'
-
-export {
-  SEO,
-  Trail,
-  Header,
-  SocialsMidia,
-}
+export { SEO } from "./SEO"
+export { Trail } from "./Trail"
+export { Header } from "./Header"
+export { SocialMedia } from "./SocialMedia"
