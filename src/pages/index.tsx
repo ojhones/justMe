@@ -16,17 +16,17 @@ type Profile = {
   verticalName: string
 }
 interface ProfileProps {
-  formatedProfile: Profile
+  formattedProfile: Profile
 }
 
-export default function Home({ formatedProfile }: ProfileProps) {
+export default function Home({ formattedProfile }: ProfileProps) {
   return (
     <S.Container>
       <S.Wrapper>
         <aside>
-          <h1>{formatedProfile.title}</h1>
+          <h1>{formattedProfile.title}</h1>
 
-          <p>{formatedProfile.resume}</p>
+          <p>{formattedProfile.resume}</p>
 
           <section>
             <SocialsMidia />
@@ -36,11 +36,11 @@ export default function Home({ formatedProfile }: ProfileProps) {
         <aside>
           <div>
             <img
-              src={formatedProfile.imageProfile}
-              alt={formatedProfile.altImage}
+              src={formattedProfile.imageProfile}
+              alt={formattedProfile.altImage}
             />
 
-            <h3>{formatedProfile.verticalName}</h3>
+            <h3>{formattedProfile.verticalName}</h3>
           </div>
         </aside>
       </S.Wrapper>
@@ -76,7 +76,7 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   })
 
-  const formatedProfile = {
+  const formattedProfile = {
     altimage: dataProfile[0].altImage,
     title: dataProfile[0].title,
     imageProfile: dataProfile[0].imageProfile,
@@ -89,7 +89,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      formatedProfile,
+      formattedProfile,
     },
     revalidate: 60 * 60 * 6, //24h
   }
