@@ -79,7 +79,9 @@ export const Wrapper = styled.div`
       width: 100%;
       align-items: center;
 
-      div {
+      > div {
+        position: relative;
+
         width: 25rem;
         height: 35rem;
 
@@ -91,12 +93,20 @@ export const Wrapper = styled.div`
           margin-bottom: 10rem;
         }
 
-        img {
-          width: 100%;
-          height: 100%;
+          div {
+            top: 2rem;
+            left: 2rem;
+            position: absolute;
 
-          object-fit: cover;
-        }
+            width: 100%;
+            height: 100%;
+
+            > img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
 
         h3 {
           right: -40%;

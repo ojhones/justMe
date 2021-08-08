@@ -1,11 +1,10 @@
 import Image from "next/image"
 import { GetStaticProps } from "next"
-
-import Prismic from "@prismicio/client"
 import { RichText } from "prismic-dom"
-import { getPrismicClient } from "../services/prismic"
+import Prismic from "@prismicio/client"
 
-import { Trail, SocialsMidia } from "../components"
+import { Trail, SocialMedia } from "../components"
+import { getPrismicClient } from "../services/prismic"
 
 import * as S from "../styles/pages/index"
 
@@ -21,8 +20,6 @@ interface ProfileProps {
 }
 
 export default function Home({ formattedProfile }: ProfileProps) {
-  const profileImage = formattedProfile.imageProfile
-
   return (
     <S.Container>
       <S.Wrapper>
@@ -32,7 +29,7 @@ export default function Home({ formattedProfile }: ProfileProps) {
           <p>{formattedProfile.resume}</p>
 
           <section>
-            <SocialsMidia />
+            <SocialMedia />
           </section>
         </aside>
 
@@ -41,6 +38,7 @@ export default function Home({ formattedProfile }: ProfileProps) {
             <Image
               width="auto"
               height="auto"
+              objectFit="cover"
               alt={formattedProfile.altImage}
               src={formattedProfile.imageProfile}
             />
@@ -88,9 +86,6 @@ export const getStaticProps: GetStaticProps = async () => {
     resume: dataProfile[0].resume,
     verticalName: dataProfile[0].verticalName,
   }
-
-  // console.log("response", JSON.stringify(response, null, 2));
-  // console.log("dataProfile", dataProfile);
 
   return {
     props: {
