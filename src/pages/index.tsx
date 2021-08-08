@@ -1,4 +1,5 @@
-import { GetStaticPaths, GetStaticProps } from "next"
+import Image from "next/image"
+import { GetStaticProps } from "next"
 
 import Prismic from "@prismicio/client"
 import { RichText } from "prismic-dom"
@@ -12,14 +13,16 @@ type Profile = {
   title: string
   resume: string
   altImage: string
-  imageProfile: string
   verticalName: string
+  imageProfile: string
 }
 interface ProfileProps {
   formattedProfile: Profile
 }
 
 export default function Home({ formattedProfile }: ProfileProps) {
+  const profileImage = formattedProfile.imageProfile
+
   return (
     <S.Container>
       <S.Wrapper>
@@ -35,9 +38,11 @@ export default function Home({ formattedProfile }: ProfileProps) {
 
         <aside>
           <div>
-            <img
-              src={formattedProfile.imageProfile}
+            <Image
+              width="auto"
+              height="auto"
               alt={formattedProfile.altImage}
+              src={formattedProfile.imageProfile}
             />
 
             <h3>{formattedProfile.verticalName}</h3>
