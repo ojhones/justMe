@@ -1,22 +1,22 @@
-import Image from "next/image"
-import { GetStaticProps } from "next"
-import { RichText } from "prismic-dom"
-import Prismic from "@prismicio/client"
+import Image from "next/image";
+import { GetStaticProps } from "next";
+import { RichText } from "prismic-dom";
+import Prismic from "@prismicio/client";
 
-import { Trail, SocialMedia } from "../components"
-import { getPrismicClient } from "../services/prismic"
+import { Trail, SocialMedia } from "../components";
+import { getPrismicClient } from "../services/prismic";
 
-import * as S from "../styles/pages/index"
+import * as S from "../styles/pages/index";
 
 type Profile = {
-  title: string
-  resume: string
-  altImage: string
-  verticalName: string
-  imageProfile: string
-}
+  title: string;
+  resume: string;
+  altImage: string;
+  verticalName: string;
+  imageProfile: string;
+};
 interface ProfileProps {
-  formattedProfile: Profile
+  formattedProfile: Profile;
 }
 
 export default function Home({ formattedProfile }: ProfileProps) {
@@ -50,13 +50,13 @@ export default function Home({ formattedProfile }: ProfileProps) {
 
       <Trail />
     </S.Container>
-  )
+  );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prismic = getPrismicClient()
+  const prismic = getPrismicClient();
 
-  const response = await prismic.query(
+  const { results } = await prismic.query(
     [Prismic.predicates.at("document.type", "justme")],
     {
       fetch: [
@@ -67,30 +67,20 @@ export const getStaticProps: GetStaticProps = async () => {
       ],
       pageSize: 100,
     }
-  )
-
-  const dataProfile = response.results.map((profile) => {
-    return {
-      altImage: profile.data.profileimage.alt,
-      title: RichText.asText(profile.data.title),
-      imageProfile: profile.data.profileimage.url,
-      resume: RichText.asText(profile.data.resume),
-      verticalName: RichText.asText(profile.data.verticalname),
-    }
-  })
+  );
 
   const formattedProfile = {
-    altimage: dataProfile[0].altImage,
-    title: dataProfile[0].title,
-    imageProfile: dataProfile[0].imageProfile,
-    resume: dataProfile[0].resume,
-    verticalName: dataProfile[0].verticalName,
-  }
+    altimage: results[0].data.profileimage.alt,
+    title: RichText.asText(results[0].data.title),
+    imageProfile: results[0].data.profileimage.url,
+    resume: RichText.asText(results[0].data.resume),
+    verticalName: RichText.asText(results[0].data.verticalname),
+  };
 
   return {
     props: {
       formattedProfile,
     },
-    revalidate: 60 * 60 * 6, //24h
-  }
-}
+    revalidate: 60 * 60 * 6, // 6h
+  };
+};
