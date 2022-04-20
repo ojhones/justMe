@@ -3,8 +3,12 @@ import { GetStaticProps } from "next";
 import { RichText } from "prismic-dom";
 import Prismic from "@prismicio/client";
 
-import { Trail, SocialMedia } from "../components";
-import { getPrismicClient } from "../services/prismic";
+
+import {
+  FaDownload
+} from "react-icons/fa";
+
+import { Trail, SocialsMedia } from "../components";
 
 import * as S from "../styles/pages/index";
 
@@ -29,8 +33,16 @@ export default function Home({ formattedProfile }: ProfileProps) {
           <p>{formattedProfile.resume}</p>
 
           <section>
-            <SocialMedia />
+            <SocialsMedia />
           </section>
+
+          <a
+            rel="noopener"
+            target="_blank"
+            href="https://drive.google.com/file/d/1cdqr_LVHjrR1rbmPCcaV98_-ngboBYBh/view?usp=sharing"
+          >
+            <FaDownload size={20} /> Baixar CV
+          </a>
         </aside>
 
         <aside>

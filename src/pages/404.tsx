@@ -1,6 +1,9 @@
 import Lottie from "react-lottie"
 
-import { SocialMedia } from "../components"
+
+import {
+  SocialsMedia
+} from '../components'
 
 import animationData from "../../public/animations/404.json"
 
@@ -30,7 +33,8 @@ export default function Custom404() {
       </h2>
 
       <section>
-        <SocialMedia />
+
+        <SocialsMedia />
       </section>
     </S.Container>
   )
