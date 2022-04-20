@@ -1,6 +1,8 @@
+import Image from "next/image";
 import { GetStaticProps } from "next";
+import { RichText } from "prismic-dom";
 import Prismic from "@prismicio/client";
-import { getPrismicClient } from "../services/prismic";
+
 
 import {
   FaDownload
@@ -10,18 +12,25 @@ import { Trail, SocialsMedia } from "../components";
 
 import * as S from "../styles/pages/index";
 
-export default function Home() {
+type Profile = {
+  title: string;
+  resume: string;
+  altImage: string;
+  verticalName: string;
+  imageProfile: string;
+};
+interface ProfileProps {
+  formattedProfile: Profile;
+}
+
+export default function Home({ formattedProfile }: ProfileProps) {
   return (
     <S.Container>
       <S.Wrapper>
         <aside>
-          <h1>Jhonatan Lima</h1>
+          <h1>{formattedProfile.title}</h1>
 
-          <p>
-            Esse é o meu portfólio, criado com as melhores práticas e
-            tecnologias que conheço no momento e, sinceramente, farei desse
-            "conheço no momento" meu eterno aprendizado!
-          </p>
+          <p>{formattedProfile.resume}</p>
 
           <section>
             <SocialsMedia />
@@ -38,9 +47,15 @@ export default function Home() {
 
         <aside>
           <div>
-            <img src="/images/jhonatanLima.jpg" alt="Jhonatan Lima!" />
+            <Image
+              width="auto"
+              height="auto"
+              objectFit="cover"
+              alt={formattedProfile.altImage}
+              src={formattedProfile.imageProfile}
+            />
 
-            <h3> Jhonatan </h3>
+            <h3>{formattedProfile.verticalName}</h3>
           </div>
         </aside>
       </S.Wrapper>
@@ -53,7 +68,7 @@ export default function Home() {
 export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient();
 
-  const response = await prismic.query(
+  const { results } = await prismic.query(
     [Prismic.predicates.at("document.type", "justme")],
     {
       fetch: [
@@ -66,9 +81,18 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   );
 
-  // console.log("response", JSON.stringify(response, null, 2));
+  const formattedProfile = {
+    altimage: results[0].data.profileimage.alt,
+    title: RichText.asText(results[0].data.title),
+    imageProfile: results[0].data.profileimage.url,
+    resume: RichText.asText(results[0].data.resume),
+    verticalName: RichText.asText(results[0].data.verticalname),
+  };
 
   return {
-    props: {},
+    props: {
+      formattedProfile,
+    },
+    revalidate: 60 * 60 * 6, // 6h
   };
 };
