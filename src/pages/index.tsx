@@ -11,6 +11,7 @@ import {
 import { Trail, SocialsMedia } from "../components";
 
 import * as S from "../styles/pages/index";
+import { getPrismicClient } from "../services/prismic";
 
 type Profile = {
   title: string;
