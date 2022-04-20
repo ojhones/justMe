@@ -2,16 +2,16 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
+<<<<<<< HEAD
+  min-height: calc(100vh - 5rem);
+=======
   min-height: calc(100vh - 12.2rem);
+>>>>>>> develop
 
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-
-  @media (max-width: 791px) {
-    min-height: 500px;
-  }
 
   h1 {
     margin-top: 1rem;
