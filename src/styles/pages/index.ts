@@ -66,12 +66,32 @@ export const Wrapper = styled.div`
       letter-spacing: 0.2rem;
     }
 
+    > a {
+      margin-top: 1rem;
+      padding: 1rem 2rem;
+
+      gap: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      opacity: 0.3;
+      border: 2px solid var(--gray-300);
+
+      
+      &:hover {
+        cursor: pointer;
+        filter: brightness(1.8);
+      }
+    }
+
     section {
       width: 100%;
       height: auto;
 
       display: flex;
       align-items: center;
+
       justify-content: flex-end;
     }
 

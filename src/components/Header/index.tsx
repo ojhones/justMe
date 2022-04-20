@@ -29,11 +29,11 @@ export function Header() {
             </a>
           </Link>
 
-          <Link href="/projects">
+          {/* <Link href="/projects">
             <a>
               Projects
             </a>
-          </Link>
+          </Link> */}
         </nav>
       </div>
     </S.Container>

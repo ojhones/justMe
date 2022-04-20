@@ -1,14 +1,14 @@
-import { Parallax } from "react-scroll-parallax";
+
 import {
-  FaWhatsappSquare,
-  FaLinkedin,
-  FaFacebookSquare,
   FaGithub,
+  FaLinkedin,
+  FaWhatsappSquare,
+  FaFacebookSquare,
 } from "react-icons/fa";
 
 import * as S from "./styles";
 
-export function SocialsMidia() {
+export function SocialsMedia() {
   return (
     <S.Container>
       <a

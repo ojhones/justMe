@@ -1,7 +1,7 @@
 import Lottie from 'react-lottie'
 
 import {
-  SocialsMidia
+  SocialsMedia
 } from '../components'
 
 import animationData from '../../public/animations/404.json'
@@ -35,7 +35,7 @@ export default function Custom404() {
       </h2>
 
       <section>
-        <SocialsMidia />
+        <SocialsMedia />
       </section>
     </S.Container>);
 }

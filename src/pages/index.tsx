@@ -2,7 +2,11 @@ import { GetStaticProps } from "next";
 import Prismic from "@prismicio/client";
 import { getPrismicClient } from "../services/prismic";
 
-import { Trail, SocialsMidia } from "../components";
+import {
+  FaDownload
+} from "react-icons/fa";
+
+import { Trail, SocialsMedia } from "../components";
 
 import * as S from "../styles/pages/index";
 
@@ -20,8 +24,16 @@ export default function Home() {
           </p>
 
           <section>
-            <SocialsMidia />
+            <SocialsMedia />
           </section>
+
+          <a
+            rel="noopener"
+            target="_blank"
+            href="https://drive.google.com/file/d/1cdqr_LVHjrR1rbmPCcaV98_-ngboBYBh/view?usp=sharing"
+          >
+            <FaDownload size={20} /> Baixar CV
+          </a>
         </aside>
 
         <aside>
