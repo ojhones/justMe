@@ -26,10 +26,6 @@ export function Header() {
           <Link href="/">
             <a>Home</a>
           </Link>
-
-          <Link href="/projects">
-            <a>Projects</a>
-          </Link>
         </nav>
       </div>
     </S.Container>
