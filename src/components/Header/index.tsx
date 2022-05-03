@@ -28,12 +28,6 @@ export function Header() {
               Home
             </a>
           </Link>
-
-          {/* <Link href="/projects">
-            <a>
-              Projects
-            </a>
-          </Link> */}
         </nav>
       </div>
     </S.Container>
