@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const OneSignal = window.OneSignal || [];
+      const OneSignal = (window as any).OneSignal || [];
       OneSignal.push(function() {
         OneSignal.init({
           appId: '67472311-dc24-4cd0-aaa6-d9ff688fcb4d',
