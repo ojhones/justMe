@@ -30,9 +30,6 @@ const SEO: FC<SEOProps> = ({
     <Head>
       <title>{title}</title>
 
-      {/* OneSignal */}
-      <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script> <script> window.OneSignalDeferred = window.OneSignalDeferred || []; OneSignalDeferred.push(async function(OneSignal) { await OneSignal.init({ appId: "67472311-dc24-4cd0-aaa6-d9ff688fcb4d", }); }); </script>
-
       {!shouldIndexPage && <meta name="robots" content="noindex.nofollow" />}
       <meta name="description" content={description} />
       <meta name="image" content={pageImage} />

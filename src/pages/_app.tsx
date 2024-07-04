@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import Lottie from "react-lottie";
 import Typewriter from "typewriter-effect";
 import GlobalStyle from "../styles/GobalStyle";
@@ -28,6 +30,17 @@ function MyApp({ Component, pageProps }) {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const OneSignal = window.OneSignal || [];
+      OneSignal.push(function() {
+        OneSignal.init({
+          appId: '67472311-dc24-4cd0-aaa6-d9ff688fcb4d',
+        });
+      });
+    }
+  }, []);
 
   return (
     <ParallaxProvider>
